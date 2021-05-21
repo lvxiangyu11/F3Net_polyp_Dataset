@@ -11,7 +11,7 @@ import time
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--testsize', type=int, default=352, help='testing size')
-parser.add_argument('--pth_path', type=str, default='./snapshots/PraNet_Res2Net/')
+parser.add_argument('--pth_path', type=str, default='./snapshots/F3Net/')
 parser.add_argument('--Anti_Alias_Downsample_use', type=bool, default=False, help='使用AntiAliasDownsampleLayer')
 
 class BinarizedF(Function):
@@ -43,7 +43,7 @@ def calDice(pred, mask, threshold=0.917647058823529):
 def count(model, dataSetName):
     _data_name = dataSetName
     data_path = './data/TestDataset/{}/'.format(_data_name)
-    save_path = './results/RF3Net/{}/'.format(_data_name)
+    save_path = './results/F3Net/{}/'.format(_data_name)
 
     with torch.no_grad():
         os.makedirs(save_path, exist_ok=True)

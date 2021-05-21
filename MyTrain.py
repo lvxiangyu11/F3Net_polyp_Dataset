@@ -97,7 +97,7 @@ if __name__ == '__main__':
     parser.add_argument('--train_path', type=str,
                         default='./data/TrainDataset/AuthorData', help='path to train dataset')
     parser.add_argument('--train_save', type=str,
-                        default='PraNet_Res2Net')
+                        default='F3Net')
     parser.add_argument('--Anti_Alias_Downsample_use', type=bool, default=False, help='使用AntiAliasDownsampleLayer')
     opt = parser.parse_args()
 
